@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UTech Student Portal</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #003366, #00509e);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 35px; /* Slightly larger for impact */
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+    /* FLIPPED RATIO: 1 part text, 2 parts image */
+    grid-template-columns: 1fr 2.5fr; 
+    gap: 30px;
+    padding: 20px;
+    align-items: start;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    color: #003366;
+    border-bottom: 3px solid #00509e;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+ul {
+    padding-left: 20px;
+    font-size: 0.95rem;
+}
+
+li {
+    margin: 8px 0;
+}
+
+a {
+    color: #00509e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* IMAGE STYLING */
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    display: block;
+}
+
+/* Tablet/Mobile adjustment: stack them if the screen is too small */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>Information for Current Students</header>
+
+<div class="container">
+
+    <div class="links-section">
+        <div class="card">
+            <h2>Academic Resources</h2>
+            <ul>
+                <li>Handbook
+                    <ul>
+                        <li>Undergraduate</li>
+                        <li>Graduate</li>
+                    </ul>
+                </li>
+                <li>Module Selection Guide</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Student Services</h2>
+            <ul>
+                <li>Accommodation</li>
+                <li>Admissions</li>
+                <li>Financial Aid</li>
+                <li>Graduation</li>
+                <li>Medical Centre</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Online Applications</h2>
+            <ul>
+                <li>Add/Drop</li>
+                <li><a href="apply.html">Boarding </a></li>
+                <li>Medical Centre Appointment</li>
+                <li>Fee Payment</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="image-box">
+        <img src='student.png' alt="Student Portal Illustration">
+    </div>
+
+</div>
+
+</body>
+</html>

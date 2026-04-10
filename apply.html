@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Boarding</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* NAVIGATION (Top Left) */
+        .nav-links {
+            position: absolute;
+            top: 85px; 
+            left: 20px;
+        }
+
+        .nav-links a {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #003366;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        /* THE GRID LAYOUT */
+        .content-area {
+            display: grid;
+            /* Column 1: Takes up 1.5x the space to push the form right 
+               Column 2: The Form
+               Column 3: The Sidebar area
+            */
+            grid-template-columns: 1.5fr 480px 1.5fr; 
+            align-items: center;
+            min-height: calc(100vh - 80px);
+            padding: 20px;
+        }
+
+        /* THE FORM BOX */
+        .form-box {
+            grid-column: 2;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+
+        /* SIDEBAR (Pushed further right) */
+        .side-text {
+            grid-column: 3;
+            width: 280px;
+            color: #333;
+            /* This margin-left pushes it away from the form box */
+            margin-left: 80px; 
+        }
+
+        .side-text h3 {
+            color: #003366;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .side-text p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .contact-link {
+            font-weight: bold;
+            color: #003366;
+            text-decoration: underline;
+        }
+
+        /* TABLE STYLES */
+        table {
+            width: 100%;
+            border-spacing: 0 10px;
+        }
+
+        td {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .apply-btn {
+            width: 100%;
+            padding: 15px;
+            background: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* MOBILE VIEW */
+        @media (max-width: 1100px) {
+            .content-area {
+                display: flex;
+                flex-direction: column;
+                margin-top: 100px;
+                padding-bottom: 50px;
+            }
+            .side-text {
+                margin-left: 0;
+                width: 100%;
+                max-width: 480px;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Apply for Boarding</h1>
+
+    <div class="nav-links">
+    <a href="index.html">⬅ Back to Student Main</a>
+    <a href="#">TERMS & CONDITIONS</a>
+</div>
+    <div class="content-area">
+        
+        <div class="form-box">
+            <form>
+                <table>
+                    <tr>
+                         <tr>
+                        <td>Preferred Hall/Residence</td>
+                        <td>
+                            <select>
+                                <option>Lionel</option>
+                                <option>Mavis</option>
+                                <option>St.Grayside</option>
+                            </select>
+                        </td>
+                    </tr>
+                        <td>First Name</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Surname</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Middle Initial</td>
+                        <td><input type="text" style="width: 50px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <label><input type="radio" name="gender"> Male</label>
+                            <label><input type="radio" name="gender"> Female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Known ailments</td>
+                        <td>
+                            <label><input type="checkbox"> Wet hands</label><br>
+                            <label><input type="checkbox"> Smelly feet</label><br>
+                            <label><input type="checkbox"> Dry Eyes</label><br>
+                            <label><input type="checkbox"> Bright Lights Allergy</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label style="font-size: 16px;">
+                                <input type="checkbox"> I have read & agree to the <a href="#">Terms & Conditions</a>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="apply-btn">APPLY</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="side-text">
+            <h3>Any Questions?</h3>
+            <p>Any one of our team members will be happy to assist you with your boarding application.</p>
+            <a href="#" class="contact-link">Contact Us</a>
+        </div>
+
+    </div>
+</body>
+</html>
+
